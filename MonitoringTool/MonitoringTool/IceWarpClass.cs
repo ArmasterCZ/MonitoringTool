@@ -30,12 +30,16 @@ namespace MonitoringTool
         private string userName;
         private string password;
         private string serverIp;
+        //private string usersDir;
+        //private string outEmail;
 
         public IceWarpClass()
         {
             userName = readFromConfig("icewarpUserName");
             password = readFromConfig("icewarpPassword");
             serverIp = readFromConfig("icewarpServerIp");
+            //outEmail = readFromConfig("iwFolderForSend");
+            //usersDir = readFromConfig("iwFolderUsers");
         }
 
         static string readFromConfig(string key)
@@ -88,7 +92,6 @@ namespace MonitoringTool
 
                                 Console.WriteLine(userName + " je blokován");
                                 usersBlocked.Add(userName);
-                                //System.Windows.Forms.MessageBox.Show("Uživatel " + userName + " je blokován");
                             }
                             File.Delete(localFilePath);
                         }
@@ -114,12 +117,10 @@ namespace MonitoringTool
                 if (data[0] == 1)
                 {
                     result = false;
-                    //Console.WriteLine("no locked.");
                 }
                 if (data[0] == 5)
                 {
                     result = true;
-                    //Console.WriteLine("Locked.");
                 }
             }
             catch (Exception e)
