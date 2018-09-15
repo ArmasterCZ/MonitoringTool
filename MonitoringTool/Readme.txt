@@ -1,10 +1,10 @@
-# MonitoringTool
-je program pro správce sítě, monitorující určité spektrum problémů.
+MonitoringTool
 pracuje na principu smyčky kontrol prováděné pomocí Timer1 (metoda timer1_Tick) zapínané tlačítkem Start vpravo dole.
 
 Popis jednotlivých monitorovacích oken:
 	(departmentCheck)
-	 - kontroluje dostupnost IP adres (ping). Ty jsou uloženy v xml souborech (každý pro jednu IP adresu) a je možné je souborově přidávat.
+	 - kontroluje dostupnost IP adres (ping). Ty jsou uloženy v xml souborech (každý pro jednu IP adresu)
+	 a je možné je souborově přidávat.
 	 
 	(lockedOutAccount)
 	 - skrz AD hledá zamknuté doménové účty. Využívá powershellový skript. (Search-ADAccount –LockedOut)
